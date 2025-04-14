@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+
+    <style>
+        /* Gaya Umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1DB954;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #121212;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+        }
+
+        /* Kontainer Halaman */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Gaya Galeri */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Gaya Video */
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .videos iframe {
+            width: 100%;
+            max-width: 300px;
+            height: 180px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            .navbar a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .gallery img {
+                max-width: 120px;
+            }
+
+            .videos iframe {
+                max-width: 250px;
+                height: 140px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Tentang Saya</a>
+        <a href="profile.html">Profil</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="formulir.html">Formulir Pendaftaran</a>
+    </div>
+
+    <div class="container">
+        <h1>Galeri Saya</h1>
+        
+        <h2>Foto</h2>
+        <div class="gallery">
+            <img src="image/foto2.jpg" alt="Foto 1">
+            <img src="image/foto3.jpg" alt="Foto 2">
+            <img src="image/foto4.jpg" alt="Foto 3">
+            <img src="image/foto5.jpg" alt="Foto 4">
+            <img src="image/foto6.jpg" alt="Foto 5">
+        </div>
+
+        <h2>Video</h2>
+        <div class="videos">
+            <iframe src="https://www.youtube.com/embed/mJE0ROBWPvY" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/kOBr5AASQdA" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

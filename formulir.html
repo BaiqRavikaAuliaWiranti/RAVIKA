@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulir Pendaftaran</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #1DB954;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #121212;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffffff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #1DB95466;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1DB954;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #1DB954;
+      color: #121212;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #17a84b;
+    }
+
+    .success-message {
+      display: none;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #1DB954;
+      color: #121212;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 0 10px #1db95488;
+    }
+
+    @media (max-width: 600px) {
+      .navbar a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Tentang Saya</a>
+    <a href="profile.html">Profil</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="formulir.html">Formulir Pendaftaran</a>
+  </div>
+
+  <div class="container">
+    <div class="success-message" id="pesanSukses">
+      🎉 Pendaftaran berhasil! Terima kasih telah mendaftar.
+    </div>
+
+    <h1>Formulir Pendaftaran</h1>
+    <form id="pendaftaranForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="tanggal">Tanggal:</label>
+      <input type="date" id="tanggal" name="tanggal" required>
+
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("pendaftaranForm");
+    const pesan = document.getElementById("pesanSukses");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // Hindari reload halaman
+      pesan.style.display = "block"; // Tampilkan pesan sukses
+      form.reset(); // Reset form
+    });
+  </script>
+
+</body>
+</html>
